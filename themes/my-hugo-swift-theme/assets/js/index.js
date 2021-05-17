@@ -7,42 +7,6 @@ function fileClosure(){
     elem('.year').innerHTML = year;
   })();
 
-  (function() {
-    let bar = 'nav_bar-wrap';
-    let navBar = elem(`.${bar}`);
-    let nav = elem('.nav-body');
-    let open = 'nav-open';
-    let exit = 'nav-exit';
-    let drop = 'nav-drop';
-    let pop = 'nav-pop';
-    let navDrop = elem(`.${drop}`);
-
-    function toggleMenu(){
-      let menuOpen, menuPulled, status;
-      modifyClass(navDrop, pop);
-      modifyClass(navBar, hidden);
-      menuOpen = containsClass(nav, open);
-      menuPulled = containsClass(nav, exit);
-
-      status = menuOpen || menuPulled ? true : false;
-
-      status ? modifyClass(nav, exit) : modifyClass(nav, open);
-      status ? modifyClass(nav, open) : modifyClass(nav, exit);
-    }
-
-    navBar.addEventListener('click', function() {
-      toggleMenu();
-    });
-    elem('.nav-close').addEventListener('click', function() {
-      toggleMenu();
-    });
-
-    elem('.nav-drop').addEventListener('click', function(e) {
-      e.target === this ? toggleMenu() : false;
-    });
-
-  })();
-
   (function makeExternalLinks(){
     let links = elems('a');
     if(links) {
