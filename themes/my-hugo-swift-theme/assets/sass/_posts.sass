@@ -77,22 +77,28 @@
     transition: opacity 0.3s ease-out
 
   &_item
-    @include shadow
     margin: 1.25rem 0
     border-radius: 10px
     overflow: hidden
+    position: relative
     width: 100%
     @media screen and (min-width:667px)
       width: 47%
+    &:hover
+      box-shadow: 0 0 1rem rgba(0,0,0,0.3)
 
   &_item:hover &_copy
     opacity: 1
 
   &_link
-    padding: 2.5px 0
     font-size: 1.25em
-    margin: 2.5px 0
-    text-align: left
+    margin: -0.7em 0
+    text-align: center
+    position: absolute
+    top: 50%
+    width: 100%
+    color: white
+    text-shadow: black 0 0 0.3em
 
   &_meta
     overflow: hidden
@@ -164,6 +170,10 @@
     &:hover::after
       background-color:rgba(0,0,0,0.3)
 
+    img
+      margin: 0
+      position: absolute
+
   &_thumbnail
     width: 100%
     margin: 0
@@ -201,12 +211,13 @@
 
 .excerpt
   padding: 0 10px 1.5rem 10px
-  position: relative
+  position: absolute
+  transform: translateY(-2.5rem)
+  width: 100%
   z-index: 1
   &_meta
     display: flex
     justify-content: space-between
     align-items: center
-    transform: translateY(-2.5rem)
     position: relative
     z-index: 5

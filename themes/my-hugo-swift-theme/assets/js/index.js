@@ -131,7 +131,8 @@ function fileClosure(){
         let icon = isCopyIcon ? isCopyIcon : isWithinCopyIcon;
         isInExcerpt = icon.closest(`.${excerpt}`);
         if (isInExcerpt) {
-          link = target.closest(`.${excerpt}`).previousElementSibling;
+          link = target.closest(`.${excerpt}`);
+          link = link.parentElement.firstElementChild;
           link = containsClass(link, postLink)? elemAttribute(link, 'href') : false;
         } else {
           link = window.location.href;
