@@ -2,7 +2,10 @@
   <nav class = 'nav-menu'>
     <a href='{{ absURL "" }}' class = 'nav-brand nav_item'>{{ .Site.Title }}</a>
     <div class = 'nav_bar-wrap'>
-      <div class = 'nav_bar'></div>
+      {{ $mainMenu := .Site.Menus.main }}
+      {{- range  $mainMenu }}
+        <a href = '{{ if hasPrefix .URL "." }}{{ .URL }}{{ else }}{{ absURL .URL }}{{ end }}' class = 'nav_item'>{{ .Name}}</a>
+      {{- end }}
     </div>
   </nav>
 </header>

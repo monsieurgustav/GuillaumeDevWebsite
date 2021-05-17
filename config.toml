@@ -1,5 +1,5 @@
 baseurl = "http://guillaume.dev/"  # Include trailing slash
-title = "Hugo Themes"
+title = "Guillaume Buisson"
 theme = "my-hugo-swift-theme"
 description = "troolo"
 # theme = "swift"

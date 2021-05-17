@@ -68,3 +68,5 @@
   other = "effacer"
 [discardComment]
   other = "Effacer commentaire"
+[projects]
+  other = "Projets"
