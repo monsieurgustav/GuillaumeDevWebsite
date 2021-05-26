@@ -9,7 +9,7 @@
 {{- $bg := (path.Join "images" $image) }}
 {{ $p := .Site.Params }}
 {{- if ne .Params.hideBanner true }}
-<section class = 'post_header' style = 'background-image:url({{ absURL $bg }});'>
+<section class = 'post_header {{ if .Params.bannerIsNarrow }}post_header_narrow{{ end }}' style = 'background-image:url({{ absURL $bg }});'>
   <h1 class='post_title'>{{ .Title }}</h1>
   {{- with .Params.brief }}
     <p>{{ . }}</p>

@@ -5,6 +5,7 @@ title: Creating a New Theme
 description: Trool
 image: 'artist.jpg'
 hideBanner: false
+draft: true
 ---
 
 ## Introduction

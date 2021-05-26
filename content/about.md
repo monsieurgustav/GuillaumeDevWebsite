@@ -2,6 +2,7 @@
 title = "About Hugo"
 date = "2014-04-09"
 image = 'read.jpg'
+draft = true
 +++
 
 Hugo is the **world’s fastest framework for building websites**. It is written in Go.
